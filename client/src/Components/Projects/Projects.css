@@ -1,0 +1,22 @@
+.project-content {
+    margin-top: 50px;
+}
+.custom-btn-upper button {
+    margin: 20px 40px;
+}
+.custom-below-content {
+    background: #f4f4f4;
+    padding: 10px 0;
+}
+.custom-white-bg {
+    background: #fff;
+    padding: 3%;
+}
+.custom-btn-upper {
+    margin-top: 30px;
+    text-align: center;
+}
+/* .nav-pills .nav-link.active, .nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #007bff;
+} */

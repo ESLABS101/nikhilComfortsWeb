@@ -1,0 +1,30 @@
+.hvac-content {
+
+}
+.beradcrumb {
+    margin-top: 4%;
+}
+.hvac-parallax {
+    /* The image used */
+    margin-top: -15px;
+    background-image: url("../img/what_is_hvac_and_where_is_it_used.jpg");
+
+    /* Set a specific height */
+    /* min-height: 700px;  */
+    padding: 15%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.hvac-parallax::after {
+    content: 'HVAC';
+    color: #fff;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 0 40%;
+    letter-spacing: 10px;
+}

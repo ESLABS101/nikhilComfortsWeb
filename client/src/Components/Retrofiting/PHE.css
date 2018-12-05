@@ -1,0 +1,27 @@
+.beradcrumb {
+    margin-top: 4%;
+}
+.phe-parallax {
+    /* The image used */
+    margin-top: -15px;
+    background-image: url("../img/Optimized-AdobeStock_108906306_Preview.jpg");
+
+    /* Set a specific height */
+    /* min-height: 700px;  */
+    padding: 15%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.phe-parallax::after {
+    content: 'Retrofiting';
+    color: #fff;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 0 30%;
+    letter-spacing: 10px;
+}

@@ -1,0 +1,31 @@
+.beradcrumb {
+    margin-top: 4%;
+}
+.electric-parallax {
+    /* The image used */
+    margin-top: -15px;
+    background-image: url("../img/bright-buildings-clear-425183.jpg");
+
+    /* Set a specific height */
+    padding: 15%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* box-shadow:  rgba(0,0,0,0.6) 0 0 0 100px inset; */
+    /* position: relative; */
+    
+    
+  
+}
+.electric-parallax::after {
+    content: 'MEP';
+    color: #fff;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 0 40%;
+    letter-spacing: 10px;
+}

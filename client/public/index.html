@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="theme-color" content="#000000">
+    
+  
+ 
+    <!--
+      manifest.json provides metadata used when your web app is added to the
+      homescreen on Android. See https://developers.google.com/web/fundamentals/engage-and-retain/web-app-manifest/
+    -->
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Nikhil Comforts</title>
+  </head>
+  <body>
+    <noscript>
+      You need to enable JavaScript to run this app.
+    </noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/slick.js"></script>
+  <script>
+  $(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
+  </script>
+  <script>
+  $(document).ready(function(){
+    var moving__background = $("#header__background");
+    $(window).scroll(function() { 
+        moving__background.css('margin-top', ($(window).scrollTop())/3); // Parallax scrolling
+        moving__background.css('opacity', 1 - ($(window).scrollTop())/moving__background.height()); // Fading out
+    });
+});
+  </script>
+  <script>
+      
+    function scrollFooter(scrollY, heightFooter)
+{
+  console.log(scrollY);
+  console.log(heightFooter);
+
+  if(scrollY >= heightFooter)
+  {
+      $('footer').css({
+          'bottom' : '0px'
+      });
+  }
+  else
+  {
+      $('footer').css({
+          'bottom' : '-' + heightFooter + 'px'
+      });
+  }
+}
+
+$(window).load(function(){
+  var windowHeight        = $(window).height(),
+      footerHeight        = $('footer').height(),
+      heightDocument      = (windowHeight) + ($('.content').height()) + ($('footer').height()) - 20;
+
+  // Definindo o tamanho do elemento pra animar
+  $('#scroll-animate, #scroll-animate-main').css({
+      'height' :  heightDocument + 'px'
+  });
+
+  // Definindo o tamanho dos elementos header e conteúdo
+  $('header').css({
+      'height' : windowHeight + 'px',
+      'line-height' : windowHeight + 'px'
+  });
+
+  $('.wrapper-parallax').css({
+      'margin-top' : windowHeight + 'px'
+  });
+
+  scrollFooter(window.scrollY, footerHeight);
+
+  // ao dar rolagem
+  window.onscroll = function(){
+      var scroll = window.scrollY;
+
+      $('#scroll-animate-main').css({
+          'top' : '-' + scroll + 'px'
+      });
+      
+      $('header').css({
+          'background-position-y' : 50 - (scroll * 100 / heightDocument) + '%'
+      });
+
+      scrollFooter(scroll, footerHeight);
+  }
+});
+    
+    </script>
+   
+
+  <script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+    
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+    
+          // Store hash
+          var hash = this.hash;
+    
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+       
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+    </script>
+    <!--parallax script herer-->
+    
+
+  </body>
+</html>

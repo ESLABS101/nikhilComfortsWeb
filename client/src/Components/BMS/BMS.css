@@ -1,0 +1,29 @@
+.beradcrumb {
+    margin-top: 4%;
+}
+.bms-parallax {
+    /* The image used */
+    margin-top: -15px;
+    background-image: url("../img/Optimized-architecture-business-cabinet-325229.jpg")!important;
+
+    /* Set a specific height */
+    /* min-height: 700px;  */
+    padding: 15%;
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.bms-parallax::after {
+    content: 'Business Management Services';
+    color: #fff;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 0 5%;
+    letter-spacing: 10px;
+}
+.hvac-content {
+    padding: 3%;
+}

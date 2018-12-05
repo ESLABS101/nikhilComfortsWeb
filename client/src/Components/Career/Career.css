@@ -1,0 +1,80 @@
+.career-header-bg {
+    background: url(../img/bg-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 20%;
+}
+.career-content {
+    background: #f9f9f9;
+   padding: 10px;   
+
+}
+.career-custom-form {
+    padding: 5%;
+}
+.career-custom-form input {
+    border-style: none;
+    border-bottom: solid thin #e1e1e1;
+    box-shadow: none;
+    background: none;
+    color: #888;
+}
+.career-custom-form input:focus {
+    box-shadow: none;
+    background: none;
+}
+.career-custom-form textarea {
+    border-style: none;
+    border-bottom: solid thin #e1e1e1;
+    box-shadow: none;
+    background: none;
+}
+.career-custom-form textarea:focus {
+    box-shadow: none;
+    background: none;
+}
+.career-custom-second-row {
+    margin-top: 30px;
+}
+
+.career-content-bg {
+    background: #fff;
+    padding: 3%;
+}
+/*******accordian css***********/
+.accordion .card-header:after {
+    font-family: 'FontAwesome';  
+    content: "\f068";
+    float: right; 
+}
+.accordion .card-header.collapsed:after {
+    /* symbol for "collapsed" panels */
+    content: "\f067"; 
+}
+.card-header {
+    margin: 10px 0;
+border: solid thin #e1e1e1;
+padding: 2%;
+background: #fff;
+font-size: 18px;
+
+}
+.custom-card {
+    border: none!important;
+}
+.custom-card-body p{
+    color: #808080;
+    font-size: 15px;
+    }
+    .custom-card-body ul li {
+        color: #808080;
+        font-size: 15px;
+        margin: 5px 0;
+    }
+    .custom-card-body h3 {
+        font-size: 20px;
+        margin-bottom: 20px;
+        margin-top: 0!important;
+        color: #0080c4;
+    }
+/**********end accordian css*********/

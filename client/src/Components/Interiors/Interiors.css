@@ -1,0 +1,30 @@
+.beradcrumb {
+    margin-top: 4%;
+}
+.interiors-parallax {
+    /* The image used */
+    margin-top: -15px;
+    background-image: url("../img/Optimized-AdobeStock_19544970_Preview.jpg");
+
+    /* Set a specific height */
+    /* min-height: 700px;  */
+    padding: 15%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.interiors-parallax::after {
+    content: 'Interiors';
+    color: #fff;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 0 40%;
+    letter-spacing: 10px;
+}
+.hvac-custom-li ul li{
+    margin: 10px 0;
+}
